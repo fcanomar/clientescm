@@ -12,6 +12,6 @@ class clientescm_partner (models.Model) :
     
     x_produccion = fields.Integer(string="Producción")
     
-    _sql_constraints = [('nif_unique','UNIQUE(vat)','El NIF introducido corresponde a un cliente ya existente.')]
+    _sql_constraints = [('nif_unique','UNIQUE(vat)','El NIF introducido corresponde a un cliente ya existente.'),]
                      
                      
