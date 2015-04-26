@@ -1,0 +1,40 @@
+<openerp>
+    <data>
+        <!-- <template id="listing"> -->
+        <!--   <ul> -->
+        <!--     <li t-foreach="objects" t-as="object"> -->
+        <!--       <a t-attf-href="#{ root }/objects/#{ object.id }"> -->
+        <!--         <t t-esc="object.display_name"/> -->
+        <!--       </a> -->
+        <!--     </li> -->
+        <!--   </ul> -->
+        <!-- </template> -->
+        <!-- <template id="object"> -->
+        <!--   <h1><t t-esc="object.display_name"/></h1> -->
+        <!--   <dl> -->
+        <!--     <t t-foreach="object._fields" t-as="field"> -->
+        <!--       <dt><t t-esc="field"/></dt> -->
+        <!--       <dd><t t-esc="object[field]"/></dd> -->
+        <!--     </t> -->
+        <!--   </dl> -->
+        <!-- </template> -->
+        
+        
+        <!-- Add new fields: PRODUCCIÓN... -->
+
+        <record id="client_form_clientcm" model="ir.ui.view">
+			<field name="model">res.partner</field>
+      		<field name="inherit_id" ref="base.view_partner_form"/>
+    
+    		<field name="arch" type="xml">
+    
+    			<field name="title" position="after">
+     			<field name="x_produccion"/>
+      			</field>
+      		
+      		</field>
+    	</record>
+        
+        
+    </data>
+</openerp>
