@@ -13,5 +13,23 @@ class clientescm_partner (models.Model) :
     x_produccion = fields.Integer(string="Producción")
     
     _sql_constraints = [('nif_unique','UNIQUE(vat)','El NIF introducido corresponde a un cliente ya existente.'),]
+    
+    @api.multi
+    def name_get(self):
+        
+        res=[]
+        
+        for item in self:
+            
+#             if (item.city):
+#                 name = item.name + ' (' + item.city + ')'
+#             else:
+#                 name = item.name
+            
+            name = item.name + 'TEST'   
+                
+            res.append((item.id,(name)))
+            
+        return res
                      
                      

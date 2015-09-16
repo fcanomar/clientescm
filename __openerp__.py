@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Gestión de la relación con el cliente - CM EUROPA",
+    'name': "Gestión de la relación con el cliente",
 
     'summary': """
         Funcionalidades para clientes""",
 
     'description': """
         NIF único
+        Nuevos Campos ficha clientes
     """,
 
     'author': "Your Company",

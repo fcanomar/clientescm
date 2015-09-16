@@ -22,7 +22,7 @@
         
         <!-- Add new fields: PRODUCCIÓN... -->
 
-        <record id="client_form_clientcm" model="ir.ui.view">
+<!--        <record id="client_form_clientcm" model="ir.ui.view">
 			<field name="model">res.partner</field>
       		<field name="inherit_id" ref="base.view_partner_form"/>
     
@@ -33,6 +33,23 @@
       			</field>
       		
       		</field>
+    	</record> -->
+    	
+    	<!-- Añade Población a la Vista Lista -->
+    	
+    	<record id="client_list_clientescm" model="ir.ui.view">
+    		<field name="model">res.partner</field>
+    		<field name="inherit_id" ref="base.view_partner_tree"/>
+    		
+    		<field name="arch" type="xml">
+    		
+    			<field name="phone" position="before">
+    				<field name="city"/>
+    			</field>
+    			
+    		</field>
+    		
+    	
     	</record>
         
         
