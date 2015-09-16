@@ -6,8 +6,10 @@
         Funcionalidades para clientes""",
 
     'description': """
-        NIF único
-        Nuevos Campos ficha clientes
+        NIF único (solo si no hay duplicados al instalarlo),
+        nuevos Campos ficha clientes,
+        población en la vista lista
+        ...
     """,
 
     'author': "Your Company",

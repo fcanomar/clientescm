@@ -22,18 +22,19 @@
         
         <!-- Add new fields: PRODUCCIÓN... -->
 
-<!--        <record id="client_form_clientcm" model="ir.ui.view">
+        <record id="client_form_clientcm" model="ir.ui.view">
 			<field name="model">res.partner</field>
       		<field name="inherit_id" ref="base.view_partner_form"/>
     
     		<field name="arch" type="xml">
     
     			<field name="title" position="after">
-     			<field name="x_produccion"/>
+     			<!--<field name="x_produccion"/>-->
+     			<field name="display_name"/>
       			</field>
       		
       		</field>
-    	</record> -->
+    	</record>
     	
     	<!-- Añade Población a la Vista Lista -->
     	
@@ -47,10 +48,26 @@
     				<field name="city"/>
     			</field>
     			
-    		</field>
-    		
-    	
+    		</field>    	
     	</record>
+    	
+    	
+    	<!-- Añade Población a las Oportunidades -->
+    	
+    	<record id="clientes_crm_clientescm" model="ir.ui.view">
+    		<field name="model">crm.lead</field>
+    		<field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+    		
+    		<field name="arch" type="xml">
+    		
+    			<field name="partner_id" position="after">
+    				<field name="x_poblacion"/>
+    			</field>
+    			
+    		</field>    	
+    	</record>
+    	
+    	
         
         
     </data>
