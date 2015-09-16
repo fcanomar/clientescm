@@ -68,6 +68,23 @@
     	</record>
     	
     	
+    	<record id="clientes_lead_kanban_clientescm" model="ir.ui.view">
+    		<field name="model">crm.lead</field>
+    		<field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+    		
+    		<field name="arch" type="xml">
+    		
+    			<field name="partner_id" position="after">
+    				<span> (</span>
+    				<field name="x_poblacion"/>
+    				<span>)</span>
+    			</field>
+
+    		</field>
+    	
+    	</record>
+    	
+    	
         
         
     </data>
